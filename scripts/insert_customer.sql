@@ -1,0 +1,11 @@
+insert into customer (customer_name,age,gender) values ('john',23,'male');
+insert into customer (customer_name,age,gender) values ('david',24,'male');
+insert into customer (customer_name,age,gender) values ('meera',23,'female');
+insert into customer (customer_name,age,gender) values ('priya',24,'female');
+insert into customer (customer_name,age,gender) values ('raj',25,'male');
+insert into customer (customer_name,age,gender) values ('rahul',27,'male');
+insert into customer (customer_name,age,gender) values ('anjali',26'female');
+insert into customer (customer_name,age,gender) values ('kabir',23,'male');
+insert into customer (customer_name,age,gender) values ('preeti',23,'female');
+insert into customer (customer_name,age,gender) values ('madhuri',26,'female');
+insert into customer (customer_name,age,gender) values ('vishal',23,'male');
