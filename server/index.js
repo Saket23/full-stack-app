@@ -1,5 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const PORT = process.env.PORT || 5000;
+const cors = require("cors");
 
 const connection = require("./db");
 const query = require("./helper");
@@ -11,6 +13,9 @@ app.use(bodyParser.json());
 
 // parse requests of content-type: application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cors());
+app.options("*", cors());
 
 app.get("/customer", async (req, res) => {
   const results = await query(
@@ -30,6 +35,6 @@ app.get("/customer/:id", async (req, res) => {
 });
 
 // set port, listen for requests
-app.listen(3000, () => {
-  console.log("Server is running on port 3000.");
+app.listen(PORT, () => {
+  console.log("Server is running on port 5000.");
 });
