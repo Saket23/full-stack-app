@@ -31,7 +31,7 @@ export function getData(): any {
     dispatch(start());
     return getDataUrl()
       .then(response => {
-        dispatch(success(response.data));
+        dispatch(success(response.data.results));
       })
       .catch(error => {
         dispatch(failure(error));
