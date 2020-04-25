@@ -7,7 +7,8 @@
     "build": "webpack",
     "start": "webpack-dev-server --open",
     "flow": "flow",
-    "test": "jest"
+    "test": "jest",
+    "typed": "flow-typed"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "enzyme": "^3.11.0",
     "express": "^4.17.1",
     "fetch-mock": "^9.4.0",
+    "flow-typed": "^3.1.0",
     "jest": "^25.4.0",
     "mysql": "^2.18.1",
     "react": "^16.13.1",
