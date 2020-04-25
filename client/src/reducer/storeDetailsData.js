@@ -6,7 +6,7 @@ type StateType = {
   error: ?string
 };
 
-const initialState = {
+export const initialState = {
   isLoading: false,
   data: [],
   error: null
