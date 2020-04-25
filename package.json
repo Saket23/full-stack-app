@@ -9,13 +9,6 @@
     "flow": "flow",
     "test": "jest"
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react",
-      "@babel/preset-flow"
-    ]
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {

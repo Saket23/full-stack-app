@@ -24,7 +24,7 @@ describe("getData", () => {
       results: {}
     });
   });
-  it("creates GET_DATA_SUCCESS when fetching result has been done", () => {
+  it("creates GET_DATA_SUCCESS when fetching result has been done", async () => {
     axios.get.mockImplementationOnce(() =>
       Promise.resolve({
         data: { results: mockBody }
@@ -36,8 +36,25 @@ describe("getData", () => {
       { type: "GET_DATA_SUCCESS", data: mockBody }
     ];
 
-    store.dispatch(actions.getData()).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    await store.dispatch(actions.getData());
+
+    expect(store.getActions()).toEqual(expectedActions);
+  });
+
+  it("creates GET_DATA_FAILURE when fetching result has been done", async () => {
+    axios.get.mockImplementationOnce(() =>
+      Promise.reject({
+        error: "Something bad happened"
+      })
+    );
+
+    const expectedActions = [
+      { type: "GET_DATA_START" },
+      { type: "GET_DATA_FAILURE", error: { error: "Something bad happened" } }
+    ];
+
+    await store.dispatch(actions.getData());
+
+    expect(store.getActions()).toEqual(expectedActions);
   });
 });
