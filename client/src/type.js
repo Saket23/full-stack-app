@@ -4,3 +4,8 @@ type CustomerData = {
   age: number,
   gender: string
 };
+
+type DetailsData = {
+  customer_name: string,
+  address: string
+};

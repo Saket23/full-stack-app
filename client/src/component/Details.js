@@ -1,3 +1,5 @@
+//@flow
+
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -5,13 +7,24 @@ import { getData } from "../action/getDetailsData";
 import { withRouter } from "react-router-dom";
 import { Wrapper, Title, Data } from "./styles/details";
 
+import type { DetailsData } from "../type";
+
+type Props = {
+  getData: number => any,
+  isDataLoaded: boolean,
+  data: DetailsData[],
+  match: any
+};
+
+type State = {};
+
 import {
   isDataLoadedSelector,
   getData as getDataSelector
 } from "../selectors/getDetailsData";
 
-class Details extends PureComponent {
-  constructor(props) {
+export class Details extends PureComponent<Props, State> {
+  constructor(props: Props) {
     super(props);
   }
   componentDidMount() {

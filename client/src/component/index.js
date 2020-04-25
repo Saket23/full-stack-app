@@ -20,8 +20,8 @@ type Props = {
 
 type State = {};
 
-class Container extends PureComponent<Props, State> {
-  constructor(props) {
+export class Container extends PureComponent<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = {};
   }

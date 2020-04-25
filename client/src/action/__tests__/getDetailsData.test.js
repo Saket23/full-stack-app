@@ -36,7 +36,7 @@ describe("getDetailsData", () => {
       { type: "GET_DETAILS_SUCCESS", data: mockBody }
     ];
 
-    await store.dispatch(actions.getData());
+    await store.dispatch(actions.getData(1));
 
     expect(store.getActions()).toEqual(expectedActions);
   });
@@ -56,7 +56,7 @@ describe("getDetailsData", () => {
       }
     ];
 
-    await store.dispatch(actions.getData());
+    await store.dispatch(actions.getData(1));
 
     expect(store.getActions()).toEqual(expectedActions);
   });
