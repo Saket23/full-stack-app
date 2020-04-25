@@ -1,8 +1,10 @@
 //@flow
 
+import type { CustomerData } from "../type";
+
 type StateType = {
   isLoading: boolean,
-  data: any,
+  data: CustomerData[],
   error: ?string
 };
 

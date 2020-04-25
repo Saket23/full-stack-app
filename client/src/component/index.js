@@ -10,8 +10,10 @@ import {
 } from "../selectors/getData";
 import { Wrapper, Customer, Title, Data } from "./styles";
 
+import type { CustomerData } from "../type";
+
 type Props = {
-  data: any,
+  data: Data[],
   getData: () => any,
   isDataLoaded: boolean
 };

@@ -2,13 +2,15 @@
 
 import axios from "axios";
 
+import type { CustomerData } from "../type";
+
 function start(): any {
   return {
     type: "GET_DATA_START"
   };
 }
 
-function success(data): any {
+function success(data: CustomerData[]): any {
   return {
     type: "GET_DATA_SUCCESS",
     data
