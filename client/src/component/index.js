@@ -8,7 +8,7 @@ import {
   getData as getDataSelector,
   isDataLoadedSelector
 } from "../selectors/getData";
-import { Wrapper, Customer, Title, Data } from "./styles";
+import { Wrapper, TitleWrapper, Title, Data, StyledLink } from "./styles";
 
 import type { CustomerData } from "../type";
 
@@ -37,18 +37,22 @@ class Container extends PureComponent<Props, State> {
       <Wrapper>
         {isDataLoaded && (
           <>
-            <Customer>
+            <TitleWrapper>
               <Title>Name</Title>
               <Title>Age</Title>
               <Title>Gender</Title>
-            </Customer>
+            </TitleWrapper>
             {data.map(d => {
               return (
-                <Customer key={d.customer_id}>
+                <StyledLink
+                  to={`/customer/${d.customer_id}`}
+                  key={d.customer_id}
+                  target="_blank"
+                >
                   <Data id={d.customer_id}>{d.customer_name}</Data>
                   <Data id={d.customer_id}>{d.age}</Data>
                   <Data id={d.customer_id}>{d.gender}</Data>
-                </Customer>
+                </StyledLink>
               );
             })}
           </>

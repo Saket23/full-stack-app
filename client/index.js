@@ -6,6 +6,8 @@ import thunkMiddleware from "redux-thunk";
 
 import reducer from "./src/reducer";
 import Container from "./src/component";
+import Details from "./src/component/Details";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const middleWares = [thunkMiddleware];
 const store = createStore(reducer, applyMiddleware(...middleWares));
@@ -14,7 +16,16 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Container />
+        <Router>
+          <Switch>
+            <Route path="/" exact>
+              <Container />
+            </Route>
+            <Route path="/customer/:customerId" exact>
+              <Details />
+            </Route>
+          </Switch>
+        </Router>
       </Provider>
     );
   }

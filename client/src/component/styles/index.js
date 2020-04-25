@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div`
   width: 70%;
@@ -6,9 +7,20 @@ export const Wrapper = styled.div`
   border: 1px solid #dcdcdc;
 `;
 
-export const Customer = styled.div`
+export const TitleWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+`;
+
+export const StyledLink = styled(Link)`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  cursor: pointer;
+  text-decoration: none;
+
+  :hover {
+    font-size: 24px;
+  }
 `;
 
 export const Title = styled.div`

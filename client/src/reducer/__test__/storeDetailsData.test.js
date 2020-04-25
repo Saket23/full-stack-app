@@ -1,5 +1,4 @@
 //@flow
-
 import storeDetailsData, { initialState } from "../storeDetailsData";
 
 describe("storeData", () => {
