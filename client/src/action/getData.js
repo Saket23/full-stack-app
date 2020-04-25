@@ -3,20 +3,20 @@
 import axios from "axios";
 import type { CustomerData } from "../type";
 
-export function start(): any {
+function start(): any {
   return {
     type: "GET_DATA_START"
   };
 }
 
-export function success(data: CustomerData[]): any {
+function success(data: CustomerData[]): any {
   return {
     type: "GET_DATA_SUCCESS",
     data
   };
 }
 
-export function failure(error: any): any {
+function failure(error: any): any {
   return {
     type: "GET_DATA_FAILURE",
     error
