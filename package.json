@@ -46,7 +46,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "flow-bin": "^0.123.0",
     "html-webpack-plugin": "^4.2.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "style-loader": "^1.2.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
